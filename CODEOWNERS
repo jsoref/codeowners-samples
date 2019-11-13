@@ -1,0 +1,13 @@
+# This is a comment.
+# Each line is a file pattern followed by one or more owners.
+
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+# @global-owner1 and @global-owner2 will be requested for
+# review when someone opens a pull request.
+*       @mszostok
+
+/some/awesome/dir @mszostok @gh-codeowners/ninjas
+
+/some/other/maybe/awesome/file.txt @gh-codeowners/vikings
+/some/other/maybe/awesome/answer.txt  @gh-codeowners/maniacs @gh-codeowners/a-team @gh-codeowners/all-stars
