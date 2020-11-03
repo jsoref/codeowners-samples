@@ -5,7 +5,7 @@ on:
     # Runs at 08:00 UTC every day
     - cron:  '0 8 * * *'
   repository_dispatch:
-    types: run-branch-master
+    types: run-branch-happy-path
 
 jobs:
   sanity:
