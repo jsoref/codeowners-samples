@@ -16,7 +16,7 @@ jobs:
         with:
           ref: happy-path
       - name: GitHub CODEOWNERS Validator
-        uses: mszostok/codeowners-validator@v0.5.1
+        uses: mszostok/codeowners-validator@v0.6.0
         with:
           checks: "files,owners,duppatterns,syntax"
           experimental_checks: "notowned"
