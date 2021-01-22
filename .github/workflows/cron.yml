@@ -4,8 +4,7 @@ on:
   schedule:
     # Runs at 08:00 UTC every day
     - cron:  '0 8 * * *'
-  repository_dispatch:
-    types: run-branch-happy-path
+  workflow_dispatch:
 
 jobs:
   sanity:
