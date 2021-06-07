@@ -1,0 +1,20 @@
+name: codeowners-validator-failures
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sanity:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository, which is validated in the next step
+      - uses: actions/checkout@v1
+        with:
+          ref: failures
+      - name: GitHub CODEOWNERS Validator
+        uses: mszostok/codeowners-validator@v0.6.0
+        with:
+          checks: "files,owners,duppatterns,syntax"
+          experimental_checks: "notowned"
+          # GitHub access token is required only if the `owners` check is enabled
+          github_access_token: "${{ secrets.OWNERS_VALIDATOR_GITHUB_SECRET }}"
