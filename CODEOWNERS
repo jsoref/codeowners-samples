@@ -9,7 +9,7 @@
 
 /some/awesome/dir @mszostok @gh-codeowners/ninjas
 
-/some/other/maybe/awesome/file.txt @gh-codeowners/vikings
+/some/other/maybe/awesome/file.txt @gh-codeowners/Vikings
 /some/other/maybe/awesome/answer.txt  @gh-codeowners/maniacs @gh-codeowners/a-team @gh-codeowners/all-stars
 
 *.md @ghost
