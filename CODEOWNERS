@@ -7,7 +7,7 @@
 # review when someone opens a pull request.
 /some/awesome/dir @mszostok @gh-codeowners/ninjas
 
-/some/other/maybe/awesome/file.txt @gh-codeowners/Vikings @gh-codeowners/A Team
+/some/other/maybe/awesome/file.txt @gh-codeowners/Vikings @gh-codeowners/A-Team
 /some/other/maybe/awesome/answer.txt  @gh-codeowners/maniacs @gh-codeowners/a-team @gh-codeowners/all-stars
 
 *.md @ghost
