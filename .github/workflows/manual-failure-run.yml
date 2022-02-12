@@ -8,11 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Checks-out your repository, which is validated in the next step
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
         with:
           ref: failures
       - name: GitHub CODEOWNERS Validator
-        uses: ./ # Uses an action in the root directory
+        uses: mszostok/codeowners-validator@v0.7.0
         with:
           checks: "files,owners,duppatterns,syntax"
           experimental_checks: "notowned"
