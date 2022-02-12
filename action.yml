@@ -54,7 +54,7 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'docker://mszostok/codeowners-validator:0.6.1-rc2'
+  image: 'docker://mszostok/codeowners-validator:0.6.1-rc1'
   env:
     ENVS_PREFIX: "INPUT"
 
