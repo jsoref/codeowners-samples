@@ -1,22 +1,23 @@
-name: codeowners-validator
+name: codeowners-validator-happy-path
 
 on:
   schedule:
     # Runs at 08:00 UTC every day
     - cron:  '0 8 * * *'
-  repository_dispatch:
-    types: run-branch-master
+  workflow_dispatch:
 
 jobs:
   sanity:
     runs-on: ubuntu-latest
     steps:
       # Checks-out your repository, which is validated in the next step
-      - uses: actions/checkout@v2
-      - name: GitHub CODEOWNERS Validator
-        uses: mszostok/codeowners-validator@v0.4.4
+      - uses: actions/checkout@v1
         with:
-          checks: "files,owners,duppatterns"
+          ref: happy-path
+      - name: GitHub CODEOWNERS Validator
+        uses: mszostok/codeowners-validator@v0.6.0
+        with:
+          checks: "files,owners,duppatterns,syntax"
           experimental_checks: "notowned"
           # GitHub access token is required only if the `owners` check is enabled
           github_access_token: "${{ secrets.OWNERS_VALIDATOR_GITHUB_SECRET }}"
