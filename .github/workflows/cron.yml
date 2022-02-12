@@ -15,9 +15,10 @@ jobs:
         with:
           ref: happy-path
       - name: GitHub CODEOWNERS Validator
-        uses: mszostok/codeowners-validator@v0.6.0
+        uses: ./ # Uses an action in the root directory
         with:
           checks: "files,owners,duppatterns,syntax"
           experimental_checks: "notowned"
           # GitHub access token is required only if the `owners` check is enabled
+          owner_checker_allow_unowned_patterns: "false"
           github_access_token: "${{ secrets.OWNERS_VALIDATOR_GITHUB_SECRET }}"
