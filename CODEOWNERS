@@ -7,7 +7,7 @@
 # review when someone opens a pull request.
 *       @mszostok
 
-/some/awesome/dir @mszostok @gh-cOdeownErs/A-TeAm # This is a comment.
+/some/awesome/dir @mszostok @gh-cOdeownErs/A-TeAm # This is a comment. @mszostok
 
 /some/other/maybe/awesome/file.txt @gh-codeowners/Amigos
 /some/other/maybe/awesome/answer.txt  @gh-codeowners/maniacs @gh-codeowners/a-team @gh-codeowners/all-stars
