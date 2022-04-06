@@ -1,5 +1,5 @@
 name: "GitHub CODEOWNERS Validator"
-description: "Github action to ensure the correctness of your CODEOWNERS file."
+description: "GitHub action to ensure the correctness of your CODEOWNERS file."
 author: "szostok.mateusz@gmail.com"
 
 inputs:
@@ -49,6 +49,11 @@ inputs:
 
   owner_checker_allow_unowned_patterns:
     description:  "Specifies whether CODEOWNERS may have unowned files. For example, `/infra/oncall-rotator/oncall-config.yml` doesn't have owner and this is not reported."
+    default: "true"
+    required: false
+
+  owner_checker_owners_must_be_teams:
+    description:  "Specifies whether only teams are allowed as owners of files."
     default: "false"
     required: false
 
