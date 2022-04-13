@@ -16,11 +16,10 @@ jobs:
           ref: happy-path
       - name: Work around permission issue
         run: git config --global --add safe.directory /github/workspace
-      - name: Trust My Directory
-        # run: git config --global --add safe.directory /__w/github-action-playground/github-action-playground
-        run: export GIT_CEILING_DIRECTORIES=/github/
       - name: GitHub CODEOWNERS Validator
         uses: ./ # Uses an action in the root directory
+        env:
+          GIT_CEILING_DIRECTORIES: "/github/"
         with:
           checks: "files,owners,duppatterns,syntax"
           experimental_checks: "notowned"
