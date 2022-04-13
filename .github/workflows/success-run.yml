@@ -16,6 +16,12 @@ jobs:
           ref: happy-path
       - name: Work around permission issue
         run: git config --global --add safe.directory /github/workspace
+      # see https://github.com/actions/checkout/issues/760    
+      - name: git-workaround
+        run: |
+          export REPOSITORY_NAME=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')
+          git config --global --add safe.directory /__w/${REPOSITORY_NAME}/${REPOSITORY_NAME}
+
       - name: GitHub CODEOWNERS Validator
         uses: ./ # Uses an action in the root directory
         env:
