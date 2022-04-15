@@ -8,9 +8,15 @@
 *       @mszostok
 
 /some/awesome/dir @mszostok @gh-cOdeownErs/A-TeAm # This is a comment. @mszostok
+/some/awesome/dir @gh-codeowners/Amigos
 
 /some/other/maybe/awesome/file.txt @gh-codeowners/Amigos
 /some/other/maybe/awesome/answer.txt  @gh-codeowners/maniacs @gh-codeowners/a-team @gh-codeowners/all-stars
+
+# Should match 'a/b', 'a/x/b', 'a/x/y/b' and so on
+a/**/b @gh-codeowners/all-stars
+# Should match all files inside directory 'a/somewhere'
+a/somewhere/** @gh-codeowners/maniacs
 
 *.md @ghost
 
