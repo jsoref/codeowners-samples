@@ -15,7 +15,7 @@ jobs:
         uses: ./ # Uses an action in the root directory
         with:
           checks: "files,owners,duppatterns,syntax"
-          experimental_checks: "notowned"
+          experimental_checks: "notowned,avoid-shadowing"
 
           # GitHub access token is required only if the `owners` check is enabled
           owner_checker_allow_unowned_patterns: "false"
