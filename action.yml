@@ -62,13 +62,13 @@ inputs:
     required: false
 
   not_owned_checker_trust_workspace:
-    description: "The repository workspace path that should be marked as safe. See: https://github.com/actions/checkout/issues/766"
+    description: "Specifies whether the repository path should be marked as safe. See: https://github.com/actions/checkout/issues/766"
     required: false
     default: "true"
 
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/mszostok/codeowners-validator:v0.7.4-rc7'
+  image: 'docker://ghcr.io/mszostok/codeowners-validator:v0.7.4-rc8'
   env:
     ENVS_PREFIX: "INPUT"
 
